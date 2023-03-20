@@ -1,0 +1,37 @@
+{
+  "cSpell.language": "en,es",
+  "cSpell.words": ["codepaths", "julian", "tsbuildinfo"],
+  "material-icon-theme.folders.associations": {
+    "abstract": "layout",
+    "abstracts": "layout",
+    "exception": "error",
+    "exceptions": "error",
+    "exception-filter": "error",
+    "exception-filters": "error",
+    "application": "app",
+    "applications": "app",
+    "domain": "core",
+    "domains": "core",
+    "infrastructure": "cluster",
+    "persistence": "server",
+    "interceptor": "hook",
+    "interceptors": "hook",
+    "entity": "class",
+    "entities": "class",
+    "aggregate": "mappings",
+    "aggregates": "mappings",
+    "value-object": "scripts",
+    "value-objects": "scripts",
+    "subdomain": "webpack",
+    "subdomains": "webpack",
+    "use-case": "components",
+    "use-cases": "components",
+    "response": "tasks",
+    "responses": "tasks"
+  },
+  "material-icon-theme.files.associations": {
+    "*.exception-filter.ts": "nest-filter",
+    "*.spec.ts": "test-js",
+    "*.test.ts": "test-js"
+  }
+}

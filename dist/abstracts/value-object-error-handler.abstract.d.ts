@@ -1,5 +1,4 @@
-import { IErrorValueObject } from '../interface';
-import { ValueObjectAbstract } from './object-value.abstract';
+import { IErrorValueObject, ValueObjectAbstract } from '..';
 export declare abstract class ValueObjectsErrorHandlerAbstract {
     private _errors;
     constructor();

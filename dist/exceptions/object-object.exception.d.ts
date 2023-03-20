@@ -1,7 +1,7 @@
-import { IErrorValueObject } from '../interface';
+import { IErrorValueObject } from '..';
 export declare class ValueObjectException extends Error {
     private _errors;
     constructor(message: string, errors: Array<IErrorValueObject>);
     get errors(): Array<IErrorValueObject>;
 }
-//# sourceMappingURL=object-value.exception.d.ts.map
+//# sourceMappingURL=object-object.exception.d.ts.map

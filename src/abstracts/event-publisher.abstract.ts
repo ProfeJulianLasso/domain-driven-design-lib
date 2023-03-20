@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { IEventPublisher } from '../interface';
+import { IEventPublisher } from '@sofka';
 
 /**
  * Abstract class representing a event publisher

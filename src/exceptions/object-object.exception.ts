@@ -1,4 +1,4 @@
-import { IErrorValueObject } from '../interface';
+import { IErrorValueObject } from '@sofka';
 
 /**
  * Class representing a value object exception

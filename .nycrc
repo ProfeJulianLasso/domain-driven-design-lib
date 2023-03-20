@@ -1,0 +1,12 @@
+{
+  "reporter": [
+    "lcov"
+  ],
+  "exclude": [
+    "**/*.test.ts",
+    "**/index.ts"
+  ],
+  "include": [
+    "src/**/*.ts"
+  ]
+}

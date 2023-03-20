@@ -1,5 +1,4 @@
-import { ValueObjectException } from '../exceptions';
-import { IErrorValueObject } from '../interface';
+import { IErrorValueObject, ValueObjectException } from '@sofka';
 
 /**
  * Abstract class for representing an object value

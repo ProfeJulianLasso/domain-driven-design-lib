@@ -1,6 +1,8 @@
-import { ValueObjectException } from '../exceptions';
-import { IErrorValueObject } from '../interface';
-import { ValueObjectAbstract } from './object-value.abstract';
+import {
+  IErrorValueObject,
+  ValueObjectAbstract,
+  ValueObjectException,
+} from '@sofka';
 
 /**
  * Abstract class that defines the error handling behavior for a value object

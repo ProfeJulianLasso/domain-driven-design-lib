@@ -15,5 +15,5 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./aggregate-root.exception"), exports);
-__exportStar(require("./object-value.exception"), exports);
+__exportStar(require("./object-object.exception"), exports);
 //# sourceMappingURL=index.js.map

@@ -12,4 +12,4 @@ class ValueObjectException extends Error {
     }
 }
 exports.ValueObjectException = ValueObjectException;
-//# sourceMappingURL=object-value.exception.js.map
+//# sourceMappingURL=object-object.exception.js.map

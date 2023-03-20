@@ -8,7 +8,6 @@ import { Observable } from 'rxjs';
  * @template CommandType - Type of input payload
  * @template ResponseType - Type of response
  *
- *
  * @since 1.0.0
  * @version 1.0.0
  * @license MIT

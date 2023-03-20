@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ValueObjectsErrorHandlerAbstract = void 0;
-const exceptions_1 = require("../exceptions");
+const _sofka_1 = require("..");
 class ValueObjectsErrorHandlerAbstract {
     _errors;
     constructor() {
@@ -22,7 +22,7 @@ class ValueObjectsErrorHandlerAbstract {
                 this.setErrors(object.getErrors());
         });
         if (this.hasErrors() === true)
-            throw new exceptions_1.ValueObjectException(message, this.getErrors());
+            throw new _sofka_1.ValueObjectException(message, this.getErrors());
     }
 }
 exports.ValueObjectsErrorHandlerAbstract = ValueObjectsErrorHandlerAbstract;

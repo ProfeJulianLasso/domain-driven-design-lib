@@ -16,7 +16,7 @@
   "scripts": {
     "test:cov:clean": "rimraf ./coverage",
     "clean": "rimraf ./dist",
-    "lint": "eslint \"src\" --fix",
+    "lint": "eslint \"src/**/*.ts\" --fix",
     "format": "prettier --write \"src/**/*.ts\"",
     "build": "npm run lint && npm run format && npm run clean && tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
     "test": "TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' NODE_ENV=test mocha -r ts-node/register -r tsconfig-paths/register 'src/**/*.test.ts'",

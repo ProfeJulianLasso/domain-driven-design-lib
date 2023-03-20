@@ -1,0 +1,1 @@
+{"version":3,"file":"use-case.interface.d.ts","sourceRoot":"","sources":["../../src/interface/use-case.interface.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAE,MAAM,MAAM,CAAC;AAgBlC,MAAM,WAAW,QAAQ,CAAC,WAAW,EAAE,YAAY;IAQjD,OAAO,CAAC,OAAO,CAAC,EAAE,WAAW,GAAG,UAAU,CAAC,YAAY,CAAC,CAAC;CAC1D"}

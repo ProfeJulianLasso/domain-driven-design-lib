@@ -60,7 +60,7 @@ export abstract class ValueObjectAbstract<Type> {
    * @type {Type}
    * @memberof ValueObjectAbstract
    */
-  private _value!: Type;
+  protected _value!: Type;
 
   /**
    * Class name of the Value Object
@@ -70,7 +70,7 @@ export abstract class ValueObjectAbstract<Type> {
    * @type {string}
    * @memberof ValueObjectAbstract
    */
-  protected abstract _className: string;
+  protected _className: string;
 
   /**
    * Creates an instance of ValueObjectBase
@@ -79,20 +79,10 @@ export abstract class ValueObjectAbstract<Type> {
    * @memberof ValueObjectBase
    */
   constructor(value?: Type) {
+    this._className = ValueObjectAbstract.name;
     this._errors = new Array<IErrorValueObject>();
     if (value) this._value = value;
     this.validateData();
-  }
-
-  /**
-   * Returns the current value of the object value
-   *
-   * @type {Type}
-   * @memberof ValueObjectAbstract
-   */
-  get value(): Type {
-    this.verifyValue();
-    return this._value;
   }
 
   /**
@@ -180,7 +170,7 @@ export abstract class ValueObjectAbstract<Type> {
   private verifyValue(): void {
     if (this.hasErrors() === true)
       throw new ValueObjectException(
-        `Value object has errors "${this._className}}"`,
+        `Value object has errors "${this._className}"`,
         this._errors
       );
   }

@@ -3,11 +3,12 @@
     "text",
     "lcov"
   ],
-  "exclude": [
-    "**/*.test.ts",
-    "**/index.ts"
-  ],
   "include": [
     "src/**/*.ts"
+  ],
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.mock.ts",
+    "**/index.ts"
   ]
 }

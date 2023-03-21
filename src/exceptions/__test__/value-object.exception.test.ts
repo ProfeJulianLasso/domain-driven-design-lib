@@ -1,16 +1,35 @@
+import { IErrorValueObject } from '@sofka';
 import { expect } from 'chai';
 import 'mocha';
 
-import { ValueObjectException } from '../object-object.exception';
+import { ValueObjectException } from '../value-object.exception';
 
 describe('ValueObjectException', () => {
-  it('should be defined', () => {
+  it('should to be defined', () => {
     expect(ValueObjectException).to.be.not.undefined;
   });
 
   it('should throw an error', () => {
-    expect(() => {
-      throw new ValueObjectException('Error message', []);
-    }).to.throw('Error message');
+    // Arrange
+    const errorMessage = 'Error message';
+    const expectedErrorMessage = 'Error message';
+    const errorData = {
+      field: 'field',
+      message: 'message',
+    } as IErrorValueObject;
+    const expectedErrorData = [errorData];
+    const valueObjectException = new ValueObjectException(errorMessage, [
+      errorData,
+    ]);
+
+    // Act
+    const error = () => {
+      throw valueObjectException;
+    };
+
+    // Assert
+    expect(error).to.be.throw(ValueObjectException);
+    expect(error).to.be.throw(expectedErrorMessage);
+    expect(valueObjectException.errors).to.be.deep.equal(expectedErrorData);
   });
 });

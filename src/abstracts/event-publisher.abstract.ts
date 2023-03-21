@@ -1,5 +1,5 @@
-import { Observable } from 'rxjs';
 import { IEventPublisher } from '@sofka';
+import { Observable } from 'rxjs';
 
 /**
  * Abstract class representing a event publisher
@@ -13,6 +13,7 @@ import { IEventPublisher } from '@sofka';
  * @example
  * ```typescript
  * import { EventPublisherAbstract } from '@sofka/ddd';
+ * import { from, Observable } from 'rxjs';
  *
  * class UsuarioCreadoEventPublisher<
  *   Response = UsuarioEntity,
@@ -32,7 +33,7 @@ import { IEventPublisher } from '@sofka';
  *     pattern: any,
  *     data: Input,
  *   ): Observable<Result> {
- *     return lastValueFrom(this.proxy.emit(pattern, data));
+ *     return from(this.proxy.emit(pattern, data));
  *   }
  * }
  * ```

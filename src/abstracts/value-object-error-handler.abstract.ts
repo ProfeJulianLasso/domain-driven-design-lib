@@ -83,7 +83,8 @@ export abstract class ValueObjectsErrorHandlerAbstract {
   }
 
   /**
-   *
+   * Validates the value objects, creates the error stack and
+   * throws an exception if it has errors
    *
    * @param {Array<ValueObjectAbstract<any>>} valueObjects
    * @param {string} message

@@ -1,5 +1,4 @@
 import { expect } from 'chai';
-import 'mocha';
 import { Observable } from 'rxjs';
 import * as sinon from 'sinon';
 import * as events from './mock/event-publisher.abstract.mock';

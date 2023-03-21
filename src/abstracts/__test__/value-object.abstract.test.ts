@@ -1,7 +1,6 @@
 import { ValueObjectException } from '@sofka';
 import { expect } from 'chai';
-import 'mocha';
-import { NombreValueObject } from './mock/object-value.abstract.mock';
+import { NombreValueObject } from './mock/value-object.abstract.mock';
 
 describe('ValueObjectAbstract', () => {
   let valueObject: NombreValueObject;

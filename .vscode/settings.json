@@ -47,6 +47,4 @@
   "mochaExplorer.env": {
     "SCOPE": "test"
   }
-  // "mocha.requires": ["ts-node/register", "tsconfig-paths/register"],
-  // "mocha.files.glob": "test/**/*test.ts",
 }

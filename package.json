@@ -1,6 +1,6 @@
 {
   "name": "@sofkau/ddd",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "author": "Julian Lasso <julian.lasso@sofka.com.co>",
   "license": "MIT",
   "description": "",
@@ -22,7 +22,7 @@
     "test:cov:clean": "rimraf ./coverage",
     "test": "TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' NODE_ENV=test mocha -r ts-node/register -r tsconfig-paths/register 'src/**/*.test.ts'",
     "test:cov": "npm run test:cov:clean && TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' NODE_ENV=test nyc mocha -r ts-node/register -r tsconfig-paths/register 'src/**/*.ts'",
-    "docs": "typedoc src/**/*.ts --out docs --exclude '**/*.test.ts' --exclude '**/*.spec.ts' --exclude '**/*.mock.ts'"
+    "docs": "typedoc src/**/*.ts --out docs --exclude '**/*.test.ts' --exclude '**/*.spec.ts' --exclude '**/*.mock.ts' --exclude '**/index.ts'"
   },
   "keywords": [
     "driven domain design",

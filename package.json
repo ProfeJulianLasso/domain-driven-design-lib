@@ -1,9 +1,9 @@
 {
   "name": "@sofkau/ddd",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.4",
   "author": "Julian Lasso <julian.lasso@sofka.com.co>",
   "license": "MIT",
-  "description": "",
+  "description": "@sofkau/ddd is a library that helps you implement the DDD pattern in your projects. This library is for educational use only and not for production use, but that doesn't mean that you can't adapt it to your needs.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
@@ -12,6 +12,12 @@
   ],
   "engines": {
     "node": ">=16"
+  },
+  "homepage": "https://profejulianlasso.github.io/domain-driven-design-lib/",
+  "bugs": "https://github.com/ProfeJulianLasso/domain-driven-design-lib/issues",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ProfeJulianLasso/domain-driven-design-lib.git"
   },
   "scripts": {
     "prepare": "husky install",
@@ -27,11 +33,15 @@
   "keywords": [
     "driven domain design",
     "ddd",
-    "DDD",
     "sofka",
     "technologies",
     "development",
-    "design"
+    "design",
+    "domain",
+    "driven",
+    "pattern",
+    "educación",
+    "entrenamiento"
   ],
   "devDependencies": {
     "@types/chai": "^4.3.4",

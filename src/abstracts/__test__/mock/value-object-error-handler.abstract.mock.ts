@@ -9,8 +9,8 @@ export class RegistrarUnUsuarioUseCase extends ValueObjectsErrorHandlerAbstract 
   execute(command: IRegistrarUnUsuarioCommand) {
     const valueObjects = this.createValueObjects(command);
     this.validateValueObjects(
-      valueObjects,
-      'Existen algunos errores en el comando "IRegistrarUnUsuarioCommand"'
+      'Existen algunos errores en el comando "IRegistrarUnUsuarioCommand"',
+      valueObjects
     );
   }
 
@@ -19,5 +19,13 @@ export class RegistrarUnUsuarioUseCase extends ValueObjectsErrorHandlerAbstract 
   ): Array<ValueObjectAbstract<any>> {
     const nombre = new NombreValueObject(command.nombre);
     return [nombre];
+  }
+
+  toPrimitives<Props>(): Props {
+    throw new Error('Method not implemented.');
+  }
+
+  protected createArrayFromValueObjects(): ValueObjectAbstract<any>[] {
+    throw new Error('Method not implemented.');
   }
 }

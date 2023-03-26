@@ -28,8 +28,8 @@ import {
  *   execute(command: IRegistrarUnUsuarioCommand) {
  *     const valueObjects = this.createValueObjects(command);
  *     this.validateValueObjects(
- *       valueObjects,
- *       'Existen algunos errores en el comando "IRegistrarUnUsuarioCommand"'
+ *       'Existen algunos errores en el comando "IRegistrarUnUsuarioCommand"',
+ *       valueObjects
  *     );
  *   }
  *
@@ -49,7 +49,23 @@ import {
  * @author Julian Andres Lasso Figueroa <julian.lasso@sofka.com.co>
  */
 export abstract class ValueObjectsErrorHandlerAbstract {
+  /**
+   * Value Object Error Stack
+   *
+   * @private
+   * @type {Array<IErrorValueObject>}
+   * @memberof ValueObjectsErrorHandlerAbstract
+   */
   private _errors: Array<IErrorValueObject>;
+
+  /**
+   * Error message for the exception thrown by all the value objects
+   *
+   * @protected
+   * @type {string}
+   * @memberof ValueObjectsErrorHandlerAbstract
+   */
+  protected _errorMessage: string;
 
   /**
    * Creates an instance of ValueObjectErrorHandlerAbstract
@@ -58,6 +74,16 @@ export abstract class ValueObjectsErrorHandlerAbstract {
    */
   constructor() {
     this._errors = new Array<IErrorValueObject>();
+    this._errorMessage = '';
+  }
+
+  /**
+   * Message of the exception thrown by all the value objects
+   *
+   * @memberof ValueObjectsErrorHandlerAbstract
+   */
+  set errorMessage(message: string) {
+    this._errorMessage = message;
   }
 
   /**
@@ -95,15 +121,15 @@ export abstract class ValueObjectsErrorHandlerAbstract {
    * Validates the value objects, creates the error stack and
    * throws an exception if it has errors
    *
-   * @param {Array<ValueObjectAbstract<any>>} valueObjects
-   * @param {string} message
+   * @param {string} message - Message of the exception
+   * @param {Array<ValueObjectAbstract<any>>} valueObjects - Array of value objects
    * @throws {ValueObjectException} Throws an exception with the value object
    *    errors if it has any
    * @memberof ValueObjectsErrorHandlerAbstract
    */
   validateValueObjects(
-    valueObjects: Array<ValueObjectAbstract<any>>,
-    message: string
+    message: string,
+    valueObjects: Array<ValueObjectAbstract<any>>
   ): void {
     valueObjects.forEach((object) => {
       if (object.hasErrors() === true) this.setErrors(object.getErrors());
@@ -112,4 +138,26 @@ export abstract class ValueObjectsErrorHandlerAbstract {
     if (this.hasErrors() === true)
       throw new ValueObjectException(message, this.getErrors());
   }
+
+  /**
+   * Returns the value object as a primitive
+   *
+   * @abstract
+   * @template Props - Type of the primitive
+   * @return {*}  {Props} - Primitive
+   * @memberof ValueObjectsErrorHandlerAbstract
+   */
+  abstract toPrimitives<Props>(): Props;
+
+  /**
+   * Creates an array of value objects from the command
+   *
+   * @protected
+   * @abstract
+   * @return {*}  {Array<ValueObjectAbstract<any>>} - Array of value objects
+   * @memberof ValueObjectsErrorHandlerAbstract
+   */
+  protected abstract createArrayFromValueObjects(): Array<
+    ValueObjectAbstract<any>
+  >;
 }

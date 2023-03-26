@@ -4,8 +4,13 @@ exports.ValueObjectsErrorHandlerAbstract = void 0;
 const _sofka_1 = require("..");
 class ValueObjectsErrorHandlerAbstract {
     _errors;
+    _errorMessage;
     constructor() {
         this._errors = new Array();
+        this._errorMessage = '';
+    }
+    set errorMessage(message) {
+        this._errorMessage = message;
     }
     getErrors() {
         return this._errors;
@@ -16,7 +21,7 @@ class ValueObjectsErrorHandlerAbstract {
     hasErrors() {
         return this._errors.length > 0 ? true : false;
     }
-    validateValueObjects(valueObjects, message) {
+    validateValueObjects(message, valueObjects) {
         valueObjects.forEach((object) => {
             if (object.hasErrors() === true)
                 this.setErrors(object.getErrors());

@@ -1,10 +1,9 @@
 import { IErrorValueObject } from '..';
 export declare abstract class ValueObjectAbstract<Type> {
     private _errors;
-    private _value;
-    protected abstract _className: string;
+    protected _value: Type;
+    protected _className: string;
     constructor(value?: Type);
-    get value(): Type;
     set value(value: Type);
     abstract validateData(): void;
     hasErrors(): boolean;
@@ -14,4 +13,4 @@ export declare abstract class ValueObjectAbstract<Type> {
     valueOf(): Type;
     private verifyValue;
 }
-//# sourceMappingURL=object-value.abstract.d.ts.map
+//# sourceMappingURL=value-object.abstract.d.ts.map

@@ -15,6 +15,6 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./event-publisher.abstract"), exports);
-__exportStar(require("./object-value.abstract"), exports);
+__exportStar(require("./value-object.abstract"), exports);
 __exportStar(require("./value-object-error-handler.abstract"), exports);
 //# sourceMappingURL=index.js.map

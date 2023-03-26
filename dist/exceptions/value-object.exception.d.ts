@@ -4,4 +4,4 @@ export declare class ValueObjectException extends Error {
     constructor(message: string, errors: Array<IErrorValueObject>);
     get errors(): Array<IErrorValueObject>;
 }
-//# sourceMappingURL=object-object.exception.d.ts.map
+//# sourceMappingURL=value-object.exception.d.ts.map

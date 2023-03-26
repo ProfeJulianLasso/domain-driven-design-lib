@@ -5,15 +5,13 @@ const _sofka_1 = require("..");
 class ValueObjectAbstract {
     _errors;
     _value;
+    _className;
     constructor(value) {
+        this._className = ValueObjectAbstract.name;
         this._errors = new Array();
         if (value)
             this._value = value;
         this.validateData();
-    }
-    get value() {
-        this.verifyValue();
-        return this._value;
     }
     set value(value) {
         this._value = value;
@@ -38,8 +36,8 @@ class ValueObjectAbstract {
     }
     verifyValue() {
         if (this.hasErrors() === true)
-            throw new _sofka_1.ValueObjectException(`Value object has errors "${this._className}}"`, this._errors);
+            throw new _sofka_1.ValueObjectException(`Value object has errors "${this._className}"`, this._errors);
     }
 }
 exports.ValueObjectAbstract = ValueObjectAbstract;
-//# sourceMappingURL=object-value.abstract.js.map
+//# sourceMappingURL=value-object.abstract.js.map

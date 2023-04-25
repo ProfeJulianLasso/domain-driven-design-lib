@@ -50,6 +50,15 @@ import {
  */
 export abstract class ValueObjectsErrorHandlerAbstract {
   /**
+   * Entity attributes array
+   *
+   * @private
+   * @type {Array<string>}
+   * @memberof ValueObjectsErrorHandlerAbstract
+   */
+  private _props: Array<string>;
+
+  /**
    * Value Object Error Stack
    *
    * @private
@@ -73,6 +82,7 @@ export abstract class ValueObjectsErrorHandlerAbstract {
    * @memberof ValueObjectErrorHandlerAbstract
    */
   constructor() {
+    this._props = [];
     this._errors = new Array<IErrorValueObject>();
     this._errorMessage = '';
   }

@@ -1,5 +1,6 @@
 import { IErrorValueObject, ValueObjectAbstract } from '..';
 export declare abstract class ValueObjectsErrorHandlerAbstract {
+    private _props;
     private _errors;
     protected _errorMessage: string;
     constructor();

@@ -3,9 +3,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ValueObjectsErrorHandlerAbstract = void 0;
 const _sofka_1 = require("..");
 class ValueObjectsErrorHandlerAbstract {
+    _props;
     _errors;
     _errorMessage;
     constructor() {
+        this._props = [];
         this._errors = new Array();
         this._errorMessage = '';
     }

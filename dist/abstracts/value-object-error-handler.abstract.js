@@ -29,6 +29,9 @@ class ValueObjectsErrorHandlerAbstract {
         if (this.hasErrors() === true)
             throw new _sofka_1.ValueObjectException(message, this.getErrors());
     }
+    checkValidateValueObjects() {
+        this.validateValueObjects(this._errorMessage, this.createArrayFromValueObjects());
+    }
 }
 exports.ValueObjectsErrorHandlerAbstract = ValueObjectsErrorHandlerAbstract;
 //# sourceMappingURL=value-object-error-handler.abstract.js.map

@@ -25,7 +25,7 @@ export class RegistrarUnUsuarioUseCase extends ValueObjectsErrorHandlerAbstract 
     throw new Error('Method not implemented.');
   }
 
-  protected createArrayFromValueObjects(): ValueObjectAbstract<any>[] {
+  createArrayFromValueObjects(): ValueObjectAbstract<any>[] {
     throw new Error('Method not implemented.');
   }
 }

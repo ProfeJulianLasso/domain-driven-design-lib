@@ -143,11 +143,24 @@ export abstract class ValueObjectsErrorHandlerAbstract {
    * Returns the value object as a primitive
    *
    * @abstract
-   * @template Props - Type of the primitive
-   * @return {*}  {Props} - Primitive
+   * @return {*}  {*} - Primitive
    * @memberof ValueObjectsErrorHandlerAbstract
    */
-  abstract toPrimitives<Props>(): Props;
+  abstract toPrimitives(): any;
+
+  /**
+   * Checks the value objects, creates the error stack and
+   * throws an exception if it has errors
+   *
+   * @protected
+   * @memberof ValueObjectsErrorHandlerAbstract
+   */
+  protected checkValidateValueObjects(): void {
+    this.validateValueObjects(
+      this._errorMessage,
+      this.createArrayFromValueObjects()
+    );
+  }
 
   /**
    * Creates an array of value objects from the command

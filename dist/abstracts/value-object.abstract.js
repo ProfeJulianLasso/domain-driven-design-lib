@@ -18,6 +18,9 @@ class ValueObjectAbstract {
         this.restartErrors();
         this.validateData();
     }
+    hasValue() {
+        return this._value ? true : false;
+    }
     hasErrors() {
         return this._errors.length > 0 ? true : false;
     }

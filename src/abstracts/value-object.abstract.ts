@@ -107,6 +107,16 @@ export abstract class ValueObjectAbstract<Type> {
   }
 
   /**
+   * Return true if the value object has a value, false otherwise
+   *
+   * @return {*}  {boolean} - True if the value object has a value, false otherwise
+   * @memberof ValueObjectAbstract
+   */
+  hasValue(): boolean {
+    return this._value ? true : false;
+  }
+
+  /**
    * Validates the value of the value object.
    * This method must be implemented in the derived classes
    *

@@ -5,6 +5,7 @@ export declare abstract class ValueObjectAbstract<Type> {
     protected _className: string;
     constructor(value?: Type);
     set value(value: Type);
+    hasValue(): boolean;
     abstract validateData(): void;
     hasErrors(): boolean;
     getErrors(): Array<IErrorValueObject>;

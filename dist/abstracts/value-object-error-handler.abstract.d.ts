@@ -8,7 +8,8 @@ export declare abstract class ValueObjectsErrorHandlerAbstract {
     setErrors(errors: Array<IErrorValueObject>): void;
     hasErrors(): boolean;
     validateValueObjects(message: string, valueObjects: Array<ValueObjectAbstract<any>>): void;
-    abstract toPrimitives<Props>(): Props;
+    abstract toPrimitives(): any;
+    protected checkValidateValueObjects(): void;
     protected abstract createArrayFromValueObjects(): Array<ValueObjectAbstract<any>>;
 }
 //# sourceMappingURL=value-object-error-handler.abstract.d.ts.map

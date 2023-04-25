@@ -6,6 +6,6 @@ export declare class RegistrarUnUsuarioUseCase extends ValueObjectsErrorHandlerA
     execute(command: IRegistrarUnUsuarioCommand): void;
     createValueObjects(command: IRegistrarUnUsuarioCommand): Array<ValueObjectAbstract<any>>;
     toPrimitives<Props>(): Props;
-    protected createArrayFromValueObjects(): ValueObjectAbstract<any>[];
+    createArrayFromValueObjects(): ValueObjectAbstract<any>[];
 }
 //# sourceMappingURL=value-object-error-handler.abstract.mock.d.ts.map

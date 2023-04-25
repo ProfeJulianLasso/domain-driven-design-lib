@@ -52,11 +52,11 @@ export abstract class ValueObjectsErrorHandlerAbstract {
   /**
    * Entity attributes array
    *
-   * @private
+   * @protected
    * @type {Array<string>}
    * @memberof ValueObjectsErrorHandlerAbstract
    */
-  private _props: Array<string>;
+  protected _props: Array<string>;
 
   /**
    * Value Object Error Stack

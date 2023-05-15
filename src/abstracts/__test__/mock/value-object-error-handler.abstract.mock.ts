@@ -1,4 +1,4 @@
-import { ValueObjectAbstract, ValueObjectsErrorHandlerAbstract } from '@sofka';
+import { ValueObjectAbstract, ValueObjectsErrorHandlerAbstract } from '../../';
 import { NombreValueObject } from './value-object.abstract.mock';
 
 export interface IRegistrarUnUsuarioCommand {

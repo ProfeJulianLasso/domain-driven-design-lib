@@ -1,4 +1,4 @@
-import { ValueObjectAbstract, ValueObjectsErrorHandlerAbstract } from '../../..';
+import { ValueObjectAbstract, ValueObjectsErrorHandlerAbstract } from '../../';
 export interface IRegistrarUnUsuarioCommand {
     nombre: string;
 }

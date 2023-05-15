@@ -1,4 +1,4 @@
-import { IErrorValueObject, ValueObjectAbstract } from '@sofka';
+import { IErrorValueObject, ValueObjectAbstract } from '../../../';
 
 export class NombreValueObject extends ValueObjectAbstract<string> {
   constructor(value?: string) {

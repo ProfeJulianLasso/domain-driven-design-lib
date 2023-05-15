@@ -1,5 +1,5 @@
-import { IErrorValueObject } from '@sofka';
 import { expect } from 'chai';
+import { IErrorValueObject } from '../../';
 
 import { ValueObjectException } from '../value-object.exception';
 

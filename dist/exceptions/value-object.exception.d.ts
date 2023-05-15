@@ -1,4 +1,4 @@
-import { IErrorValueObject } from '..';
+import { IErrorValueObject } from '../';
 export declare class ValueObjectException extends Error {
     private _errors;
     constructor(message: string, errors: Array<IErrorValueObject>);

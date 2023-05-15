@@ -7,8 +7,8 @@
  * file that was distributed with this source code.
  */
 
-import { IEventPublisher } from '@sofka';
 import { Observable } from 'rxjs';
+import { IEventPublisher } from '../';
 
 /**
  * Abstract class representing a event publisher

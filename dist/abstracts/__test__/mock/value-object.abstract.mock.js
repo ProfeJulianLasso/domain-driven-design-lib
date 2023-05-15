@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.NombreValueObject = void 0;
-const _sofka_1 = require("../../..");
-class NombreValueObject extends _sofka_1.ValueObjectAbstract {
+const __1 = require("../../../");
+class NombreValueObject extends __1.ValueObjectAbstract {
     constructor(value) {
         super(value);
         this._className = NombreValueObject.name;

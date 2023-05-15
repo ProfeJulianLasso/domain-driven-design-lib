@@ -1,4 +1,4 @@
-import { IErrorValueObject } from '..';
+import { IErrorValueObject } from '../';
 export declare abstract class ValueObjectAbstract<Type> {
     private _errors;
     protected _value: Type;

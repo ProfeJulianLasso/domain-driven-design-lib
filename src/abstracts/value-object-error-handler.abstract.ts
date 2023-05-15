@@ -11,7 +11,7 @@ import {
   IErrorValueObject,
   ValueObjectAbstract,
   ValueObjectException,
-} from '@sofka';
+} from '../';
 
 /**
  * Abstract class that defines the error handling behavior for a value object
@@ -150,6 +150,15 @@ export abstract class ValueObjectsErrorHandlerAbstract {
   }
 
   /**
+   * Creates an array of value objects from the command
+   *
+   * @abstract
+   * @return {*}  {Array<ValueObjectAbstract<any>>} - Array of value objects
+   * @memberof ValueObjectsErrorHandlerAbstract
+   */
+  abstract createArrayFromValueObjects(): Array<ValueObjectAbstract<any>>;
+
+  /**
    * Returns the value object as a primitive
    *
    * @abstract
@@ -171,16 +180,4 @@ export abstract class ValueObjectsErrorHandlerAbstract {
       this.createArrayFromValueObjects()
     );
   }
-
-  /**
-   * Creates an array of value objects from the command
-   *
-   * @protected
-   * @abstract
-   * @return {*}  {Array<ValueObjectAbstract<any>>} - Array of value objects
-   * @memberof ValueObjectsErrorHandlerAbstract
-   */
-  protected abstract createArrayFromValueObjects(): Array<
-    ValueObjectAbstract<any>
-  >;
 }

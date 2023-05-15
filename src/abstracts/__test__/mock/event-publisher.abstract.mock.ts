@@ -1,5 +1,5 @@
-import { EventPublisherAbstract, IEventPublisher } from '@sofka';
 import { Observable } from 'rxjs';
+import { EventPublisherAbstract, IEventPublisher } from '../../../';
 
 export interface ClientProxy {
   emit<ResultType = any, InputType = any>(

@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RegistrarUnUsuarioUseCase = void 0;
-const _sofka_1 = require("../../..");
+const __1 = require("../../");
 const value_object_abstract_mock_1 = require("./value-object.abstract.mock");
-class RegistrarUnUsuarioUseCase extends _sofka_1.ValueObjectsErrorHandlerAbstract {
+class RegistrarUnUsuarioUseCase extends __1.ValueObjectsErrorHandlerAbstract {
     execute(command) {
         const valueObjects = this.createValueObjects(command);
         this.validateValueObjects('Existen algunos errores en el comando "IRegistrarUnUsuarioCommand"', valueObjects);

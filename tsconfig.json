@@ -20,8 +20,5 @@
     "strictBindCallApply": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
-    "paths": {
-      "@sofka": ["./src"]
-    }
   }
 }

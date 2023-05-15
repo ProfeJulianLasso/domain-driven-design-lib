@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-import { IErrorValueObject, ValueObjectException } from '@sofka';
+import { IErrorValueObject, ValueObjectException } from '../';
 
 /**
  * Abstract class for representing an object value

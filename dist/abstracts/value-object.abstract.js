@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ValueObjectAbstract = void 0;
-const _sofka_1 = require("..");
+const __1 = require("../");
 class ValueObjectAbstract {
     _errors;
     _value;
@@ -39,7 +39,7 @@ class ValueObjectAbstract {
     }
     verifyValue() {
         if (this.hasErrors() === true)
-            throw new _sofka_1.ValueObjectException(`Value object has errors "${this._className}"`, this._errors);
+            throw new __1.ValueObjectException(`Value object has errors "${this._className}"`, this._errors);
     }
 }
 exports.ValueObjectAbstract = ValueObjectAbstract;

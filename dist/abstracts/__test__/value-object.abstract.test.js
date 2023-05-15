@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const _sofka_1 = require("../..");
 const chai_1 = require("chai");
+const __1 = require("../../");
 const value_object_abstract_mock_1 = require("./mock/value-object.abstract.mock");
 describe('ValueObjectAbstract', () => {
     let valueObject;
@@ -34,7 +34,7 @@ describe('ValueObjectAbstract', () => {
             const object = new value_object_abstract_mock_1.NombreValueObject(nombre);
             object.valueOf();
         };
-        (0, chai_1.expect)(valueObject).to.be.throw(_sofka_1.ValueObjectException);
+        (0, chai_1.expect)(valueObject).to.be.throw(__1.ValueObjectException);
     });
 });
 //# sourceMappingURL=value-object.abstract.test.js.map

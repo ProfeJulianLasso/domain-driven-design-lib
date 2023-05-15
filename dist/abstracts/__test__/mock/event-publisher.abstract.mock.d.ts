@@ -1,5 +1,5 @@
-import { EventPublisherAbstract } from '../../..';
 import { Observable } from 'rxjs';
+import { EventPublisherAbstract } from '../../../';
 export interface ClientProxy {
     emit<ResultType = any, InputType = any>(pattern: any, data: InputType): Observable<ResultType>;
 }

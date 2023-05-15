@@ -1,4 +1,4 @@
-import { ValueObjectAbstract } from '../../..';
+import { ValueObjectAbstract } from '../../../';
 export declare class NombreValueObject extends ValueObjectAbstract<string> {
     constructor(value?: string);
     validateData(): void;

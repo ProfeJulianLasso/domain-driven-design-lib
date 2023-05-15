@@ -1,5 +1,5 @@
-import { ValueObjectException } from '@sofka';
 import { expect } from 'chai';
+import { ValueObjectException } from '../../';
 import { NombreValueObject } from './mock/value-object.abstract.mock';
 
 describe('ValueObjectAbstract', () => {

@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-import { IErrorValueObject } from '@sofka';
+import { IErrorValueObject } from '../';
 
 /**
  * Class representing a value object exception

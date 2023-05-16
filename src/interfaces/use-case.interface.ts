@@ -32,5 +32,5 @@ export interface IUseCase<CommandType, ResponseType> {
    */
   execute(
     command?: CommandType
-  ): Observable<ResponseType> | Promise<ResponseType>;
+  ): ResponseType | Observable<ResponseType> | Promise<ResponseType>;
 }

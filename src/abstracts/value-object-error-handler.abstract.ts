@@ -84,7 +84,7 @@ export abstract class ValueObjectsErrorHandlerAbstract {
   constructor() {
     this._props = [];
     this._errors = new Array<IErrorValueObject>();
-    this._errorMessage = '';
+    this._errorMessage = 'There are some errors in the data provided';
   }
 
   /**

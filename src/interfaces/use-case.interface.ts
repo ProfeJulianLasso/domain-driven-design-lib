@@ -27,8 +27,10 @@ export interface IUseCase<CommandType, ResponseType> {
    * Executes the use case
    *
    * @param {CommandType} [command] - Input payload for the use case, if applicable
-   * @return {ResponseType} - Output data type
+   * @return {*}  {(Observable<ResponseType> | Promise<ResponseType>)} - Output data type
    * @memberof IUseCase
    */
-  execute(command?: CommandType): Observable<ResponseType>;
+  execute(
+    command?: CommandType
+  ): Observable<ResponseType> | Promise<ResponseType>;
 }

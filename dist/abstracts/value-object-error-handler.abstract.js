@@ -9,7 +9,7 @@ class ValueObjectsErrorHandlerAbstract {
     constructor() {
         this._props = [];
         this._errors = new Array();
-        this._errorMessage = '';
+        this._errorMessage = 'There are some errors in the data provided';
     }
     set errorMessage(message) {
         this._errorMessage = message;

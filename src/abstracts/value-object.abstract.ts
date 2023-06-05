@@ -17,36 +17,6 @@ import { IErrorValueObject, ValueObjectException } from '../';
  * @class ValueObjectBase
  * @template Type - Type of value represented by the value object
  *
- * @example
- * ```typescript
- * import { ValueObjectBase } from '@sofka/ddd';
- *
- * export class ApellidoValueObject extends ValueObjectAbstract<string> {
- *   validateData(): void {
- *     this.validateIsEmpty();
- *     this.validateLength();
- *   }
- *
- *   private validateIsEmpty(): void {
- *     if (IsEmpty(this.value) === true) {
- *       this.setError({
- *         field: 'apellido',
- *         message: 'El "apellido" no puede estar vacío',
- *       } as IErrorValueObject);
- *     }
- *   }
- *
- *   private validateLength(): void {
- *     if (this.value && StringMaxLength(this.value, 100) === true) {
- *       this.setError({
- *         field: 'apellido',
- *         message: 'El "apellido" no puede tener más de 100 caracteres',
- *       } as IErrorValueObject);
- *     }
- *   }
- * }
- * ```
- *
  * @since 1.0.0
  * @version 1.0.0
  * @license MIT
@@ -72,23 +42,12 @@ export abstract class ValueObjectAbstract<Type> {
   protected _value!: Type;
 
   /**
-   * Class name of the Value Object
-   *
-   * @protected
-   * @abstract
-   * @type {string}
-   * @memberof ValueObjectAbstract
-   */
-  protected _className: string;
-
-  /**
    * Creates an instance of ValueObjectBase
    *
    * @param {Type} [value] Initial value of the object value
    * @memberof ValueObjectBase
    */
   constructor(value?: Type) {
-    this._className = ValueObjectAbstract.name;
     this._errors = new Array<IErrorValueObject>();
     if (value) this._value = value;
     this.validateData();
@@ -189,7 +148,7 @@ export abstract class ValueObjectAbstract<Type> {
   private verifyValue(): void {
     if (this.hasErrors() === true)
       throw new ValueObjectException(
-        `Value object has errors "${this._className}"`,
+        `There is a value object that has an error`,
         this._errors
       );
   }

@@ -2,11 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const chai_1 = require("chai");
 const exceptions_1 = require("src/exceptions");
-const value_object_error_handler_abstract_mock_1 = require("./mock/value-object-error-handler.abstract.mock");
+const mock_1 = require("./mock");
 describe('ValueObjectsErrorHandlerAbstract', () => {
     let useCase;
     beforeEach(() => {
-        useCase = new value_object_error_handler_abstract_mock_1.RegistrarUnUsuarioUseCase();
+        useCase = new mock_1.RegistrarUnUsuarioUseCase();
     });
     it('should to be defined', () => {
         (0, chai_1.expect)(useCase).to.be.not.undefined;

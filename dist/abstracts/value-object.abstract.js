@@ -5,9 +5,7 @@ const __1 = require("../");
 class ValueObjectAbstract {
     _errors;
     _value;
-    _className;
     constructor(value) {
-        this._className = ValueObjectAbstract.name;
         this._errors = new Array();
         if (value)
             this._value = value;
@@ -39,7 +37,7 @@ class ValueObjectAbstract {
     }
     verifyValue() {
         if (this.hasErrors() === true)
-            throw new __1.ValueObjectException(`Value object has errors "${this._className}"`, this._errors);
+            throw new __1.ValueObjectException(`There is a value object that has an error`, this._errors);
     }
 }
 exports.ValueObjectAbstract = ValueObjectAbstract;

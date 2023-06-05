@@ -7,11 +7,9 @@
  * file that was distributed with this source code.
  */
 
-import {
-  IErrorValueObject,
-  ValueObjectAbstract,
-  ValueObjectException,
-} from '../';
+import { ValueObjectException } from '../exceptions';
+import { IErrorValueObject } from '../interfaces';
+import { ValueObjectAbstract } from './value-object.abstract';
 
 /**
  * Abstract class that defines the error handling behavior for a value object
@@ -19,29 +17,6 @@ import {
  * @export
  * @abstract
  * @class ValueObjectErrorHandlerAbstract
- *
- * @example
- * ```typescript
- * import { ValueObjectErrorHandlerAbstract } from '@sofka/ddd';
- *
- * class RegistrarUnUsuarioUseCase extends ValueObjectsErrorHandlerAbstract {
- *   execute(command: IRegistrarUnUsuarioCommand) {
- *     const valueObjects = this.createValueObjects(command);
- *     this.validateValueObjects(
- *       'Existen algunos errores en el comando "IRegistrarUnUsuarioCommand"',
- *       valueObjects
- *     );
- *   }
- *
- *   createValueObjects(
- *     command: IRegistrarUnUsuarioCommand
- *   ): Array<ValueObjectAbstract<any>> {
- *     const email = new EmailValueObject(command.email);
- *     const password = new PasswordValueObject(command.password);
- *     return [email, password];
- *   }
- * }
- * ```
  *
  * @since 1.0.0
  * @version 1.0.0

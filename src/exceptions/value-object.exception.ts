@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-import { IErrorValueObject } from '../';
+import { IErrorValueObject } from '../interfaces';
 
 /**
  * Class representing a value object exception
@@ -15,12 +15,6 @@ import { IErrorValueObject } from '../';
  * @export
  * @class ValueObjectException
  * @extends {Error} - Error class
- *
- * @example
- * ```typescript
- * import { ValueObjectException } from '@sofka/ddd';
- * throw new ValueObjectException('Error message');
- * ```
  *
  * @since 1.0.0
  * @version 1.0.0

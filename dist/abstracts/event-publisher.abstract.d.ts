@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { IEventPublisher } from '../';
+import { IEventPublisher } from '../interfaces';
 export declare abstract class EventPublisherAbstract<Response> implements IEventPublisher {
     private readonly eventPublisher;
     private _response;

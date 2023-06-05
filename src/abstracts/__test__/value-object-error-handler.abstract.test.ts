@@ -1,9 +1,6 @@
 import { expect } from 'chai';
 import { ValueObjectException } from 'src/exceptions';
-import {
-  IRegistrarUnUsuarioCommand,
-  RegistrarUnUsuarioUseCase,
-} from './mock/value-object-error-handler.abstract.mock';
+import { IRegistrarUnUsuarioCommand, RegistrarUnUsuarioUseCase } from './mock';
 
 describe('ValueObjectsErrorHandlerAbstract', () => {
   let useCase: RegistrarUnUsuarioUseCase;

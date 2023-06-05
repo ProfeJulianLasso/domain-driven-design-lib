@@ -2,7 +2,6 @@ import { IErrorValueObject } from '../';
 export declare abstract class ValueObjectAbstract<Type> {
     private _errors;
     protected _value: Type;
-    protected _className: string;
     constructor(value?: Type);
     set value(value: Type);
     hasValue(): boolean;

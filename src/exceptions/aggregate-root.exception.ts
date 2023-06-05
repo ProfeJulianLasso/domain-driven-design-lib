@@ -14,12 +14,6 @@
  * @class AggregateRootException
  * @extends {Error} - Error class
  *
- * @example
- * ```typescript
- * import { AggregateRootException } from '@sofka/ddd';
- * throw new AggregateRootException('Error message');
- * ```
- *
  * @since 1.0.0
  * @version 1.0.0
  * @license MIT

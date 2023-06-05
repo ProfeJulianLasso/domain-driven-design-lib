@@ -21,9 +21,6 @@
 
 <h3>Export</h3>
 <h3>Abstract</h3>
-<h3>Example</h3><pre><code class="language-typescript"><span class="hl-0">import</span><span class="hl-1"> { </span><span class="hl-2">ValueObjectBase</span><span class="hl-1"> } </span><span class="hl-0">from</span><span class="hl-1"> </span><span class="hl-3">&#39;@sofka/ddd&#39;</span><span class="hl-1">;</span><br/><br/><span class="hl-0">export</span><span class="hl-1"> </span><span class="hl-4">class</span><span class="hl-1"> </span><span class="hl-5">ApellidoValueObject</span><span class="hl-1"> </span><span class="hl-4">extends</span><span class="hl-1"> </span><span class="hl-5">ValueObjectAbstract</span><span class="hl-1">&lt;</span><span class="hl-5">string</span><span class="hl-1">&gt; {</span><br/><span class="hl-1">  </span><span class="hl-6">validateData</span><span class="hl-1">(): </span><span class="hl-5">void</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-4">this</span><span class="hl-1">.</span><span class="hl-6">validateIsEmpty</span><span class="hl-1">();</span><br/><span class="hl-1">    </span><span class="hl-4">this</span><span class="hl-1">.</span><span class="hl-6">validateLength</span><span class="hl-1">();</span><br/><span class="hl-1">  }</span><br/><br/><span class="hl-1">  </span><span class="hl-4">private</span><span class="hl-1"> </span><span class="hl-6">validateIsEmpty</span><span class="hl-1">(): </span><span class="hl-5">void</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-0">if</span><span class="hl-1"> (</span><span class="hl-6">IsEmpty</span><span class="hl-1">(</span><span class="hl-4">this</span><span class="hl-1">.</span><span class="hl-2">value</span><span class="hl-1">) === </span><span class="hl-4">true</span><span class="hl-1">) {</span><br/><span class="hl-1">      </span><span class="hl-4">this</span><span class="hl-1">.</span><span class="hl-6">setError</span><span class="hl-1">({</span><br/><span class="hl-1">        </span><span class="hl-2">field:</span><span class="hl-1"> </span><span class="hl-3">&#39;apellido&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">        </span><span class="hl-2">message:</span><span class="hl-1"> </span><span class="hl-3">&#39;El &quot;apellido&quot; no puede estar vacío&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">      } </span><span class="hl-0">as</span><span class="hl-1"> </span><span class="hl-5">IErrorValueObject</span><span class="hl-1">);</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">  }</span><br/><br/><span class="hl-1">  </span><span class="hl-4">private</span><span class="hl-1"> </span><span class="hl-6">validateLength</span><span class="hl-1">(): </span><span class="hl-5">void</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-0">if</span><span class="hl-1"> (</span><span class="hl-4">this</span><span class="hl-1">.</span><span class="hl-2">value</span><span class="hl-1"> &amp;&amp; </span><span class="hl-6">StringMaxLength</span><span class="hl-1">(</span><span class="hl-4">this</span><span class="hl-1">.</span><span class="hl-2">value</span><span class="hl-1">, </span><span class="hl-8">100</span><span class="hl-1">) === </span><span class="hl-4">true</span><span class="hl-1">) {</span><br/><span class="hl-1">      </span><span class="hl-4">this</span><span class="hl-1">.</span><span class="hl-6">setError</span><span class="hl-1">({</span><br/><span class="hl-1">        </span><span class="hl-2">field:</span><span class="hl-1"> </span><span class="hl-3">&#39;apellido&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">        </span><span class="hl-2">message:</span><span class="hl-1"> </span><span class="hl-3">&#39;El &quot;apellido&quot; no puede tener más de 100 caracteres&#39;</span><span class="hl-1">,</span><br/><span class="hl-1">      } </span><span class="hl-0">as</span><span class="hl-1"> </span><span class="hl-5">IErrorValueObject</span><span class="hl-1">);</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">  }</span><br/><span class="hl-1">}</span>
-</code></pre>
-
 <h3>Since</h3><p>1.0.0</p>
 
 <h3>Version</h3><p>1.0.0</p>
@@ -44,7 +41,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">ValueObjectAbstract</span></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/8b9a327/src/abstracts/value-object.abstract.ts#L55">src/abstracts/value-object.abstract.ts:55</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/290515c/src/abstracts/value-object.abstract.ts#L25">src/abstracts/value-object.abstract.ts:25</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -56,8 +53,7 @@
 </div></section>
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Properties</h3>
-<div class="tsd-index-list"><a href="abstracts_value_object_abstract.ValueObjectAbstract.html#_className" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-protected"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#FF984D" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-1024-path"></rect><path d="M9.354 16V7.24H12.174C12.99 7.24 13.638 7.476 14.118 7.948C14.606 8.412 14.85 9.036 14.85 9.82C14.85 10.604 14.606 11.232 14.118 11.704C13.638 12.168 12.99 12.4 12.174 12.4H10.434V16H9.354ZM10.434 11.428H12.174C12.646 11.428 13.022 11.284 13.302 10.996C13.59 10.7 13.734 10.308 13.734 9.82C13.734 9.324 13.59 8.932 13.302 8.644C13.022 8.356 12.646 8.212 12.174 8.212H10.434V11.428Z" fill="var(--color-text)" id="icon-1024-text"></path></svg><span>_class<wbr/>Name</span></a>
-<a href="abstracts_value_object_abstract.ValueObjectAbstract.html#_errors" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>_errors</span></a>
+<div class="tsd-index-list"><a href="abstracts_value_object_abstract.ValueObjectAbstract.html#_errors" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#FF984D" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-1024-path"></rect><path d="M9.354 16V7.24H12.174C12.99 7.24 13.638 7.476 14.118 7.948C14.606 8.412 14.85 9.036 14.85 9.82C14.85 10.604 14.606 11.232 14.118 11.704C13.638 12.168 12.99 12.4 12.174 12.4H10.434V16H9.354ZM10.434 11.428H12.174C12.646 11.428 13.022 11.284 13.302 10.996C13.59 10.7 13.734 10.308 13.734 9.82C13.734 9.324 13.59 8.932 13.302 8.644C13.022 8.356 12.646 8.212 12.174 8.212H10.434V11.428Z" fill="var(--color-text)" id="icon-1024-text"></path></svg><span>_errors</span></a>
 <a href="abstracts_value_object_abstract.ValueObjectAbstract.html#_value" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-private"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>_value</span></a>
 </div></section>
 <section class="tsd-index-section">
@@ -100,19 +96,9 @@
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="abstracts_value_object_abstract.ValueObjectAbstract.html" class="tsd-signature-type" data-tsd-kind="Class">ValueObjectAbstract</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">Type</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/8b9a327/src/abstracts/value-object.abstract.ts#L90">src/abstracts/value-object.abstract.ts:90</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/290515c/src/abstracts/value-object.abstract.ts#L50">src/abstracts/value-object.abstract.ts:50</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
-<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a id="_className" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>_class<wbr/>Name</span><a href="#_className" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">_class<wbr/>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-<div class="tsd-comment tsd-typography"><p>Class name of the Value Object</p>
-
-<h3>Abstract</h3>
-<h3>Memberof</h3><p>ValueObjectAbstract</p>
-</div><aside class="tsd-sources">
-<ul>
-<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/8b9a327/src/abstracts/value-object.abstract.ts#L82">src/abstracts/value-object.abstract.ts:82</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private"><a id="_errors" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_errors</span><a href="#_errors" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">_errors<span class="tsd-signature-symbol">:</span> <a href="../interfaces/interfaces_error_object_value_interface.IErrorValueObject.html" class="tsd-signature-type" data-tsd-kind="Interface">IErrorValueObject</a><span class="tsd-signature-symbol">[]</span></div>
@@ -121,7 +107,7 @@
 <h3>Memberof</h3><p>ValueObjectAbstract</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/8b9a327/src/abstracts/value-object.abstract.ts#L63">src/abstracts/value-object.abstract.ts:63</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/290515c/src/abstracts/value-object.abstract.ts#L33">src/abstracts/value-object.abstract.ts:33</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private"><a id="_value" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_value</span><a href="#_value" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">_value<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type" data-tsd-kind="Type parameter">Type</span></div>
@@ -130,7 +116,7 @@
 <h3>Memberof</h3><p>ValueObjectAbstract</p>
 </div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/8b9a327/src/abstracts/value-object.abstract.ts#L72">src/abstracts/value-object.abstract.ts:72</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/290515c/src/abstracts/value-object.abstract.ts#L42">src/abstracts/value-object.abstract.ts:42</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Accessors</h2>
 <section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class"><a id="value" class="tsd-anchor"></a>
@@ -150,7 +136,7 @@ and validates the new value</p>
 <h5>value: <span class="tsd-signature-type" data-tsd-kind="Type parameter">Type</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/8b9a327/src/abstracts/value-object.abstract.ts#L103">src/abstracts/value-object.abstract.ts:103</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/290515c/src/abstracts/value-object.abstract.ts#L62">src/abstracts/value-object.abstract.ts:62</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="getErrors" class="tsd-anchor"></a>
@@ -167,7 +153,7 @@ and validates the new value</p>
 </div>
 <h4 class="tsd-returns-title">Returns <a href="../interfaces/interfaces_error_object_value_interface.IErrorValueObject.html" class="tsd-signature-type" data-tsd-kind="Interface">IErrorValueObject</a><span class="tsd-signature-symbol">[]</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/8b9a327/src/abstracts/value-object.abstract.ts#L145">src/abstracts/value-object.abstract.ts:145</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/290515c/src/abstracts/value-object.abstract.ts#L104">src/abstracts/value-object.abstract.ts:104</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="hasErrors" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>has<wbr/>Errors</span><a href="#hasErrors" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -181,7 +167,7 @@ and validates the new value</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/8b9a327/src/abstracts/value-object.abstract.ts#L134">src/abstracts/value-object.abstract.ts:134</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/290515c/src/abstracts/value-object.abstract.ts#L93">src/abstracts/value-object.abstract.ts:93</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="hasValue" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>has<wbr/>Value</span><a href="#hasValue" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -195,7 +181,7 @@ and validates the new value</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/8b9a327/src/abstracts/value-object.abstract.ts#L115">src/abstracts/value-object.abstract.ts:115</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/290515c/src/abstracts/value-object.abstract.ts#L74">src/abstracts/value-object.abstract.ts:74</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private"><a id="restartErrors" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>restart<wbr/>Errors</span><a href="#restartErrors" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
@@ -207,7 +193,7 @@ and validates the new value</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/8b9a327/src/abstracts/value-object.abstract.ts#L166">src/abstracts/value-object.abstract.ts:166</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/290515c/src/abstracts/value-object.abstract.ts#L125">src/abstracts/value-object.abstract.ts:125</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a id="setError" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagProtected">Protected</code> <span>set<wbr/>Error</span><a href="#setError" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
@@ -226,7 +212,7 @@ and validates the new value</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/8b9a327/src/abstracts/value-object.abstract.ts#L156">src/abstracts/value-object.abstract.ts:156</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/290515c/src/abstracts/value-object.abstract.ts#L115">src/abstracts/value-object.abstract.ts:115</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="validateData" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagAbstract">Abstract</code> <span>validate<wbr/>Data</span><a href="#validateData" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -240,7 +226,7 @@ This method must be implemented in the derived classes</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/8b9a327/src/abstracts/value-object.abstract.ts#L126">src/abstracts/value-object.abstract.ts:126</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/290515c/src/abstracts/value-object.abstract.ts#L85">src/abstracts/value-object.abstract.ts:85</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="valueOf" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>value<wbr/>Of</span><a href="#valueOf" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -254,7 +240,7 @@ This method must be implemented in the derived classes</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type" data-tsd-kind="Type parameter">Type</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/8b9a327/src/abstracts/value-object.abstract.ts#L176">src/abstracts/value-object.abstract.ts:176</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/290515c/src/abstracts/value-object.abstract.ts#L135">src/abstracts/value-object.abstract.ts:135</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private"><a id="verifyValue" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>verify<wbr/>Value</span><a href="#verifyValue" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
@@ -269,7 +255,7 @@ This method must be implemented in the derived classes</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/8b9a327/src/abstracts/value-object.abstract.ts#L189">src/abstracts/value-object.abstract.ts:189</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/ProfeJulianLasso/domain-driven-design-lib/blob/290515c/src/abstracts/value-object.abstract.ts#L148">src/abstracts/value-object.abstract.ts:148</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
 <details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
@@ -307,7 +293,6 @@ This method must be implemented in the derived classes</p>
 <li class="current tsd-kind-class tsd-parent-kind-module"><a href="abstracts_value_object_abstract.ValueObjectAbstract.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-class)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-128-path"></rect><path d="M11.898 16.1201C11.098 16.1201 10.466 15.8961 10.002 15.4481C9.53803 15.0001 9.30603 14.3841 9.30603 13.6001V9.64012C9.30603 8.85612 9.53803 8.24012 10.002 7.79212C10.466 7.34412 11.098 7.12012 11.898 7.12012C12.682 7.12012 13.306 7.34812 13.77 7.80412C14.234 8.25212 14.466 8.86412 14.466 9.64012H13.386C13.386 9.14412 13.254 8.76412 12.99 8.50012C12.734 8.22812 12.37 8.09212 11.898 8.09212C11.426 8.09212 11.054 8.22412 10.782 8.48812C10.518 8.75212 10.386 9.13212 10.386 9.62812V13.6001C10.386 14.0961 10.518 14.4801 10.782 14.7521C11.054 15.0161 11.426 15.1481 11.898 15.1481C12.37 15.1481 12.734 15.0161 12.99 14.7521C13.254 14.4801 13.386 14.0961 13.386 13.6001H14.466C14.466 14.3761 14.234 14.9921 13.77 15.4481C13.306 15.8961 12.682 16.1201 11.898 16.1201Z" fill="var(--color-text)" id="icon-128-text"></path></svg><span>Value<wbr/>Object<wbr/>Abstract</span></a>
 <ul>
 <li class="tsd-kind-constructor tsd-parent-kind-class"><a href="abstracts_value_object_abstract.ValueObjectAbstract.html#constructor" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-512-path"></use><use href="#icon-512-text"></use></svg>constructor</a></li>
-<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="abstracts_value_object_abstract.ValueObjectAbstract.html#_className" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>_class<wbr/>Name</a></li>
 <li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="abstracts_value_object_abstract.ValueObjectAbstract.html#_errors" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>_errors</a></li>
 <li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="abstracts_value_object_abstract.ValueObjectAbstract.html#_value" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>_value</a></li>
 <li class="tsd-kind-accessor tsd-parent-kind-class"><a href="abstracts_value_object_abstract.ValueObjectAbstract.html#value" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-262144-path"></use><use href="#icon-262144-text"></use></svg>value</a></li>

@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ValueObjectsErrorHandlerAbstract = void 0;
-const __1 = require("../");
+const exceptions_1 = require("../exceptions");
 class ValueObjectsErrorHandlerAbstract {
     _props;
     _errors;
@@ -29,7 +29,7 @@ class ValueObjectsErrorHandlerAbstract {
                 this.setErrors(object.getErrors());
         });
         if (this.hasErrors() === true)
-            throw new __1.ValueObjectException(message, this.getErrors());
+            throw new exceptions_1.ValueObjectException(message, this.getErrors());
     }
     checkValidateValueObjects() {
         this.validateValueObjects(this._errorMessage, this.createArrayFromValueObjects());

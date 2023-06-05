@@ -8,7 +8,7 @@
  */
 
 import { Observable } from 'rxjs';
-import { IEventPublisher } from '../';
+import { IEventPublisher } from '../interfaces';
 
 /**
  * Abstract class representing a event publisher
@@ -18,34 +18,6 @@ import { IEventPublisher } from '../';
  * @class EventPublisherAbstract
  * @implements {IEventPublisher}
  * @template Response - Type of response
- *
- * @example
- * ```typescript
- * import { EventPublisherAbstract } from '@sofka/ddd';
- * import { from, Observable } from 'rxjs';
- *
- * class UsuarioCreadoEventPublisher<
- *   Response = UsuarioEntity,
- * > extends EventPublisherAbstract<Response> {
- *   constructor(private readonly proxy: ClientProxy) {
- *     super(proxy as unknown as IEventPublisher);
- *   }
- *
- *   publish<Result = any>(): Observable<Result> {
- *     return this.emit(
- *       'usuario_creado',
- *       JSON.stringify({ data: this.response }),
- *     );
- *   }
- *
- *   emit<Result = any, Input = UsuarioEntity>(
- *     pattern: any,
- *     data: Input,
- *   ): Observable<Result> {
- *     return from(this.proxy.emit(pattern, data));
- *   }
- * }
- * ```
  *
  * @since 1.0.0
  * @version 1.0.0

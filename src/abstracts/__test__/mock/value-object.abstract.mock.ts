@@ -1,11 +1,6 @@
 import { IErrorValueObject, ValueObjectAbstract } from '../../../';
 
 export class NombreValueObject extends ValueObjectAbstract<string> {
-  constructor(value?: string) {
-    super(value);
-    this._className = NombreValueObject.name;
-  }
-
   validateData(): void {
     this.validateIsEmpty();
   }
